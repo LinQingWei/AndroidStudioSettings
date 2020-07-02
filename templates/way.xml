@@ -23,4 +23,10 @@
       <option name="JAVA_CODE" value="true" />
     </context>
   </template>
+  <template name="pc" value="private $CLASS$() {&#10;    throw new UnsupportedOperationException(&quot;u can't instantiate me...&quot;);&#10;}" description="private constructor" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS" expression="className()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
 </templateSet>
