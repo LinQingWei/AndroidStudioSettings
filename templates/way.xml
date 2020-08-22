@@ -29,4 +29,10 @@
       <option name="JAVA_CODE" value="true" />
     </context>
   </template>
+  <template name="sm" value="private static volatile $CLASS$ sInstance;&#10;&#10;private $CLASS$() {&#10;}&#10;&#10;public static $CLASS$ getInstane() {&#10;    if (sInstance == null) {&#10;        synchronized ($CLASS$.class) {&#10;            if (sInstance == null) {&#10;                sInstance = new $CLASS$();&#10;            }&#10;        }&#10;    }&#10;    &#10;    return sInstance;&#10;}" description="Singleton mode" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS" expression="className()" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
 </templateSet>
